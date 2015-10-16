@@ -5,11 +5,11 @@ import java.net.{InetAddress, Socket}
 /**
  * Created by Mayanka on 08-Oct-15.
  */
-  object iOSConnector {
+object iOSConnector {
 
   def main(args: Array[String]) {
 
-      receiveFromRobot()
+    receiveFromRobot()
 
   }
   def findIpAdd():String =
@@ -19,10 +19,10 @@ import java.net.{InetAddress, Socket}
 
     return localIpAddress
   }
-  def receiveFromRobot()
+  def receiveFromRobot()//134.193.136.213
   {
     try {
-      lazy val address: Array[Byte] = Array(134.toByte, 193.toByte, 19.toByte, 19.toByte)
+      lazy val address: Array[Byte] = Array(134.toByte, 193.toByte, 136.toByte, 213.toByte)
       val ia = InetAddress.getByAddress(address)
       val socket = new Socket(ia, 1234)
       // val out = new PrintStream(socket.getOutputStream)
@@ -32,13 +32,13 @@ import java.net.{InetAddress, Socket}
         val userInput=in.readLine
         if(userInput!=null) {
           println(userInput)
-         // val km=new KeyedMessage[String,String](topic,userInput)
-         // producer.send(km)
+          // val km=new KeyedMessage[String,String](topic,userInput)
+          // producer.send(km)
         }
       }
 
       in.close()
-      socket.close()
+      // socket.close()
     }
     catch {
       case e: IOException =>

@@ -7,6 +7,7 @@ import org.apache.log4j.Logger
 
 /**
  * Created by Mayanka on 06-Oct-15.
+ *Modified by Hastimal on 14-Oct-15
  */
 object KafkaWordCountProducer {
   def main(args: Array[String]) {
@@ -60,7 +61,7 @@ object KafkaWordCountProducer {
         case e: IOException =>
 
       }
-     // producer.send(messages: _*)
+      // producer.send(messages: _*)
       Thread.sleep(100)
     }
   }
