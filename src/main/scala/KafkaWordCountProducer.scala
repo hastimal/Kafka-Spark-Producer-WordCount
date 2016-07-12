@@ -6,8 +6,7 @@ import kafka.producer.{KeyedMessage, Producer, ProducerConfig}
 import org.apache.log4j.Logger
 
 /**
- * Created by Mayanka on 06-Oct-15.
- *Modified by Hastimal on 14-Oct-15
+ *Created by Hastimal on 14-Oct-15
  */
 object KafkaWordCountProducer {
   def main(args: Array[String]) {
